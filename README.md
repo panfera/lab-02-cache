@@ -333,7 +333,7 @@ investigation:
 		 duration: "849mcs"
 	- experiment:
 		number: 10
-		input_data:
+        input_data:
 			  buffer_size: "8192kb"
 		results:
 		 duration: "3244mcs"
