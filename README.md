@@ -135,214 +135,214 @@ cache_size['3'] = 8 mb;
 
 ```yaml
 investigation:
-	travel_order: "direction"
-	experiments:
-	- experiment:
-		number: 1
-		input_data:
-			  buffer_size: "16kb"
-		results:
-		 duration: "0mcs"
-	- experiment:
-		number: 2
-		input_data:
-			  buffer_size: "32kb"
-		results:
-		 duration: "1mcs"
-	- experiment:
-		number: 3
-		input_data:
-			  buffer_size: "64kb"
-		results:
-		 duration: "4mcs"
-	- experiment:
-		number: 4
-		input_data:
-			  buffer_size: "128kb"
-		results:
-		 duration: "14mcs"
-	- experiment:
-		number: 5
-		input_data:
-			  buffer_size: "256kb"
-		results:
-		 duration: "17mcs"
-	- experiment:
-		number: 6
-		input_data:
-			  buffer_size: "512kb"
-		results:
-		 duration: "29mcs"
-	- experiment:
-		number: 7
-		input_data:
-			  buffer_size: "1024kb"
-		results:
-		 duration: "59mcs"
-	- experiment:
-		number: 8
-		input_data:
-			  buffer_size: "2048kb"
-		results:
-		 duration: "164mcs"
-	- experiment:
-		number: 9
-		input_data:
-			  buffer_size: "4096kb"
-		results:
-		 duration: "718mcs"
-	- experiment:
-		number: 10
-		input_data:
-			  buffer_size: "8192kb"
-		results:
-		 duration: "987mcs"
-	- experiment:
-		number: 11
-		input_data:
-			  buffer_size: "12288kb"
-		results:
-		 duration: "1236mcs"
+    travel_order: "reverse"
+    experiments:
+    - experiment:
+        number: 1
+        input_data:
+              buffer_size: "16kb"
+        results:
+         duration: "0mcs"
+    - experiment:
+        number: 2
+        input_data:
+              buffer_size: "32kb"
+        results:
+         duration: "1mcs"
+    - experiment:
+        number: 3
+        input_data:
+              buffer_size: "64kb"
+        results:
+         duration: "3mcs"
+    - experiment:
+        number: 4
+        input_data:
+              buffer_size: "128kb"
+        results:
+         duration: "6mcs"
+    - experiment:
+        number: 5
+        input_data:
+              buffer_size: "256kb"
+        results:
+         duration: "13mcs"
+    - experiment:
+        number: 6
+        input_data:
+              buffer_size: "512kb"
+        results:
+         duration: "25mcs"
+    - experiment:
+        number: 7
+        input_data:
+              buffer_size: "1024kb"
+        results:
+         duration: "88mcs"
+    - experiment:
+        number: 8
+        input_data:
+              buffer_size: "2048kb"
+        results:
+         duration: "132mcs"
+    - experiment:
+        number: 9
+        input_data:
+              buffer_size: "4096kb"
+        results:
+         duration: "231mcs"
+    - experiment:
+        number: 10
+        input_data:
+              buffer_size: "8192kb"
+        results:
+         duration: "585mcs"
+    - experiment:
+        number: 11
+        input_data:
+              buffer_size: "12288kb"
+        results:
+         duration: "1120mcs"
 
 investigation:
-	travel_order: "reverse"
-	experiments:
-	- experiment:
-		number: 1
-		input_data:
-			  buffer_size: "16kb"
-		results:
-		 duration: "0mcs"
-	- experiment:
-		number: 2
-		input_data:
-			  buffer_size: "32kb"
-		results:
-		 duration: "1mcs"
-	- experiment:
-		number: 3
-		input_data:
-			  buffer_size: "64kb"
-		results:
-		 duration: "3mcs"
-	- experiment:
-		number: 4
-		input_data:
-			  buffer_size: "128kb"
-		results:
-		 duration: "7mcs"
-	- experiment:
-		number: 5
-		input_data:
-			  buffer_size: "256kb"
-		results:
-		 duration: "13mcs"
-	- experiment:
-		number: 6
-		input_data:
-			  buffer_size: "512kb"
-		results:
-		 duration: "32mcs"
-	- experiment:
-		number: 7
-		input_data:
-			  buffer_size: "1024kb"
-		results:
-		 duration: "54mcs"
-	- experiment:
-		number: 8
-		input_data:
-			  buffer_size: "2048kb"
-		results:
-		 duration: "132mcs"
-	- experiment:
-		number: 9
-		input_data:
-			  buffer_size: "4096kb"
-		results:
-		 duration: "223mcs"
-	- experiment:
-		number: 10
-		input_data:
-			  buffer_size: "8192kb"
-		results:
-		 duration: "870mcs"
-	- experiment:
-		number: 11
-		input_data:
-			  buffer_size: "12288kb"
-		results:
-		 duration: "1155mcs"
+    travel_order: "reverse"
+    experiments:
+    - experiment:
+        number: 1
+        input_data:
+              buffer_size: "16kb"
+        results:
+         duration: "0mcs"
+    - experiment:
+        number: 2
+        input_data:
+              buffer_size: "32kb"
+        results:
+         duration: "1mcs"
+    - experiment:
+        number: 3
+        input_data:
+              buffer_size: "64kb"
+        results:
+         duration: "3mcs"
+    - experiment:
+        number: 4
+        input_data:
+              buffer_size: "128kb"
+        results:
+         duration: "6mcs"
+    - experiment:
+        number: 5
+        input_data:
+              buffer_size: "256kb"
+        results:
+         duration: "13mcs"
+    - experiment:
+        number: 6
+        input_data:
+              buffer_size: "512kb"
+        results:
+         duration: "25mcs"
+    - experiment:
+        number: 7
+        input_data:
+              buffer_size: "1024kb"
+        results:
+         duration: "51mcs"
+    - experiment:
+        number: 8
+        input_data:
+              buffer_size: "2048kb"
+        results:
+         duration: "99mcs"
+    - experiment:
+        number: 9
+        input_data:
+              buffer_size: "4096kb"
+        results:
+         duration: "390mcs"
+    - experiment:
+        number: 10
+        input_data:
+              buffer_size: "8192kb"
+        results:
+         duration: "773mcs"
+    - experiment:
+        number: 11
+        input_data:
+              buffer_size: "12288kb"
+        results:
+         duration: "1323mcs"
 
 investigation:
-	travel_order: "random"
-	experiments:
-	- experiment:
-		number: 1
-		input_data:
-			  buffer_size: "16kb"
-		results:
-		 duration: "3mcs"
-	- experiment:
-		number: 2
-		input_data:
-			  buffer_size: "32kb"
-		results:
-		 duration: "6mcs"
-	- experiment:
-		number: 3
-		input_data:
-			  buffer_size: "64kb"
-		results:
-		 duration: "14mcs"
-	- experiment:
-		number: 4
-		input_data:
-			  buffer_size: "128kb"
-		results:
-		 duration: "34mcs"
-	- experiment:
-		number: 5
-		input_data:
-			  buffer_size: "256kb"
-		results:
-		 duration: "60mcs"
-	- experiment:
-		number: 6
-		input_data:
-			  buffer_size: "512kb"
-		results:
-		 duration: "124mcs"
-	- experiment:
-		number: 7
-		input_data:
-			  buffer_size: "1024kb"
-		results:
-		 duration: "231mcs"
-	- experiment:
-		number: 8
-		input_data:
-			  buffer_size: "2048kb"
-		results:
-		 duration: "412mcs"
-	- experiment:
-		number: 9
-		input_data:
-			  buffer_size: "4096kb"
-		results:
-		 duration: "1066mcs"
-	- experiment:
-		number: 10
-		input_data:
-			  buffer_size: "8192kb"
-		results:
-		 duration: "5480mcs"
-	- experiment:
-		number: 11
-		input_data:
-			  buffer_size: "12288kb"
-		results:
-		 duration: "9562mcs"
+    travel_order: "reverse"
+    experiments:
+    - experiment:
+        number: 1
+        input_data:
+              buffer_size: "16kb"
+        results:
+         duration: "3mcs"
+    - experiment:
+        number: 2
+        input_data:
+              buffer_size: "32kb"
+        results:
+         duration: "6mcs"
+    - experiment:
+        number: 3
+        input_data:
+              buffer_size: "64kb"
+        results:
+         duration: "13mcs"
+    - experiment:
+        number: 4
+        input_data:
+              buffer_size: "128kb"
+        results:
+         duration: "27mcs"
+    - experiment:
+        number: 5
+        input_data:
+              buffer_size: "256kb"
+        results:
+         duration: "62mcs"
+    - experiment:
+        number: 6
+        input_data:
+              buffer_size: "512kb"
+        results:
+         duration: "120mcs"
+    - experiment:
+        number: 7
+        input_data:
+              buffer_size: "1024kb"
+        results:
+         duration: "215mcs"
+    - experiment:
+        number: 8
+        input_data:
+              buffer_size: "2048kb"
+        results:
+         duration: "513mcs"
+    - experiment:
+        number: 9
+        input_data:
+              buffer_size: "4096kb"
+        results:
+         duration: "1539mcs"
+    - experiment:
+        number: 10
+        input_data:
+              buffer_size: "8192kb"
+        results:
+         duration: "4475mcs"
+    - experiment:
+        number: 11
+        input_data:
+              buffer_size: "12288kb"
+        results:
+         duration: "8833mcs"
 
 ```
 

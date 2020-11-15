@@ -154,33 +154,33 @@ void Tester::random(){
 }
 
 void Tester::print_direct(std::ostream& out) const{
-  out << "investigation:\n\ttravel_order: \"direction\"\n\texperiments:\n";
+  out << "investigation:\n    travel_order: \"reverse\"\n    experiments:\n";
   for (size_t l = 0; l < size_buf.size(); ++l){
-    out << "\t- experiment:\n\t\tnumber: " << l + 1
-        << "\n\t\tinput_data:\n\t\t\t  buffer_size: \"" << series[l]
-        << "kb\"\n\t\tresults:\n\t\t duration: \""<< time_direct[l]
+    out << "    - experiment:\n        number: " << l + 1
+        << "\n        input_data:\n              buffer_size: \"" << series[l]
+        << "kb\"\n        results:\n         duration: \""<< time_direct[l]
         << "mcs\"" << std::endl;
   }
   out << std::endl;
 }
 
 void Tester::print_reverse(std::ostream& out) const{
-  out << "investigation:\n\ttravel_order: \"reverse\"\n\texperiments:\n";
+  out << "investigation:\n    travel_order: \"reverse\"\n    experiments:\n";
   for (size_t l = 0; l < size_buf.size(); ++l){
-    out << "\t- experiment:\n\t\tnumber: " << l + 1
-        << "\n\t\tinput_data:\n\t\t\t  buffer_size: \"" << series[l]
-        << "kb\"\n\t\tresults:\n\t\t duration: \""<< time_reverse[l]
+    out << "    - experiment:\n        number: " << l + 1
+        << "\n        input_data:\n              buffer_size: \"" << series[l]
+        << "kb\"\n        results:\n         duration: \""<< time_reverse[l]
         << "mcs\"" << std::endl;
   }
   out << std::endl;
 }
 
 void Tester::print_random(std::ostream& out) const{
-  out << "investigation:\n\ttravel_order: \"random\"\n\texperiments:\n";
+  out << "investigation:\n    travel_order: \"reverse\"\n    experiments:\n";
   for (size_t l = 0; l < size_buf.size(); ++l){
-    out << "\t- experiment:\n\t\tnumber: " << l + 1
-        << "\n\t\tinput_data:\n\t\t\t  buffer_size: \"" << series[l]
-        << "kb\"\n\t\tresults:\n\t\t duration: \""<< time_random[l]
+    out << "    - experiment:\n        number: " << l + 1
+        << "\n        input_data:\n              buffer_size: \"" << series[l]
+        << "kb\"\n        results:\n         duration: \""<< time_random[l]
         << "mcs\"" << std::endl;
   }
   out << std::endl;
