@@ -345,5 +345,4 @@ investigation:
          duration: "8804mcs"
 
 ```
-![Cache](./images/graph.jpg)
-
+![Cache](./images/graph.png)
