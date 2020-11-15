@@ -40,7 +40,7 @@ class Tester {
   int m;
   int size;
   int* testing_buf;
-  int L_min, L_max;
+  int L_min, L_max, L1_element;
   const int iter = 100;
 
   std::vector<double> time_direct;

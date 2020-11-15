@@ -6,7 +6,8 @@
 
 Tester::Tester(int Lmin, int Lmax):
     series(0), buf(NULL), size_buf(0), m(0), size(0), testing_buf(0),
-    L_min(Lmin), L_max(Lmax), time_direct(0), time_reverse(0), time_random(0){
+    L_min(Lmin), L_max(Lmax), L1_element(L_min*1024/sizeof(int)),
+    time_direct(0), time_reverse(0), time_random(0){
 }
 Tester::~Tester() {
   for (size_t i = 0; i < size_buf.size(); ++i)
@@ -60,13 +61,13 @@ void Tester::warming_up(int l){
   size = size_buf[l];
   int count;
   m = 0;
-  if (size <= L_min){
-    count = L_min/size;
+  if (size < L1_element){
+    count = L1_element/size;
     for (int k = 0; k < count; ++k)
       for (int i = 0; i < size; i += 16)
         m = testing_buf[i];
   } else{
-    for (int i = 0; i < L_min; i += 16)
+    for (int i = 0; i < L1_element; i += 16)
       m = testing_buf[i];
   }
 }
@@ -194,7 +195,7 @@ void Tester::show_Experiment(std::ostream& out) {
   direct();
   reverse();
   random();
-  out<<(*this);
+  out << (*this);
 }
 std::ostream& operator<< (std::ostream& out, const Tester& tester){
   tester.print_direct(out);
