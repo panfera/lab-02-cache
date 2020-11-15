@@ -75,24 +75,24 @@ void Tester::warming_up(int l){
 void Tester::direct() {
   time_direct.clear();
 
-  for (size_t l = 0; l < size_buf.size(); ++l){
+  for (size_t l = 0; l < size_buf.size(); ++l) {
     m = 0;
     testing_buf = buf[l];
     size = size_buf[l];
+    int elapsed_seconds = 0;
+
     warming_up(l);
 
-    auto start = std::chrono::steady_clock::now();
     for (int k = 0; k < iter; ++k) {
-      for (int i = 0; i < size; i+=16)
-        m = testing_buf[i];
+      auto start = std::chrono::high_resolution_clock::now();
+      for (int i = 0; i < size; i += 16) m = testing_buf[i];
+      auto end = std::chrono::high_resolution_clock::now();
+      elapsed_seconds +=
+          std::chrono::duration_cast<std::chrono::microseconds>(end - start)
+              .count();
     }
-    auto end = std::chrono::steady_clock::now();
-    auto  elapsed_seconds_dur =
-        std::chrono::duration_cast<std::chrono::nanoseconds>(end - start);
-    double elapsed_seconds = (elapsed_seconds_dur).count();
-    elapsed_seconds/=iter;
-    elapsed_seconds/=(1+size/16);
-    time_direct.push_back(round(elapsed_seconds));
+    elapsed_seconds=round(static_cast<double>(elapsed_seconds) / iter);
+    time_direct.push_back(elapsed_seconds);
   }
 }
 
@@ -103,20 +103,20 @@ void Tester::reverse(){
     m = 0;
     testing_buf = buf[l];
     size = size_buf[l];
+    int elapsed_seconds = 0;
+
     warming_up(l);
 
-    auto start = std::chrono::steady_clock::now();
     for (int k = 0; k < iter; ++k) {
-      for (int i = size_buf[l] - size_buf[l] % 16 - 1; i >= 0; i -= 16)
-        m = testing_buf[i];
+      auto start = std::chrono::high_resolution_clock::now();
+      for (int i = size - size % 16 - 1; i >= 0; i -= 16) m = testing_buf[i];
+      auto end = std::chrono::high_resolution_clock::now();
+      elapsed_seconds +=
+          std::chrono::duration_cast<std::chrono::microseconds>(end - start)
+              .count();
     }
-    auto end = std::chrono::steady_clock::now();
-    auto  elapsed_seconds_dur =
-        std::chrono::duration_cast<std::chrono::nanoseconds>(end - start);
-    double elapsed_seconds = (elapsed_seconds_dur).count();
-    elapsed_seconds/=iter;
-    elapsed_seconds/=(1+size/16);
-    time_reverse.push_back(round(elapsed_seconds));
+    elapsed_seconds=round(static_cast<double>(elapsed_seconds) / iter);
+    time_reverse.push_back(elapsed_seconds);
   }
 }
 void Tester::random(){
@@ -136,22 +136,19 @@ void Tester::random(){
     size = size_buf[l];
     testing_buf = buf[l];
 
+    int elapsed_seconds = 0;
+
     warming_up(l);
 
-    auto start = std::chrono::steady_clock::now();
-
     for (int k = 0; k < iter; ++k) {
-      for (const auto& number : index){
-        m = testing_buf[number];
-      }
+      auto start = std::chrono::high_resolution_clock::now();
+      for (const auto& number : index)m = testing_buf[number];
+      auto end = std::chrono::high_resolution_clock::now();
+      elapsed_seconds +=
+          std::chrono::duration_cast<std::chrono::microseconds>(end - start)
+              .count();
     }
-    auto end = std::chrono::steady_clock::now();
-    auto  elapsed_seconds_dur =
-        std::chrono::duration_cast<std::chrono::nanoseconds>(end - start);
-    double elapsed_seconds = elapsed_seconds_dur.count();
-
-    elapsed_seconds/=iter;
-    elapsed_seconds/=(1+size/16);
+    elapsed_seconds=round(static_cast<double>(elapsed_seconds) / iter);
     time_random.push_back(round(elapsed_seconds));
   }
 }
@@ -162,7 +159,7 @@ void Tester::print_direct(std::ostream& out) const{
     out << "\t- experiment:\n\t\tnumber: " << l + 1
         << "\n\t\tinput_data:\n\t\t\t  buffer_size: \"" << series[l]
         << "kb\"\n\t\tresults:\n\t\t duration: \""<< time_direct[l]
-        << "ns\"" << std::endl;
+        << "mcs\"" << std::endl;
   }
   out << std::endl;
 }
@@ -173,7 +170,7 @@ void Tester::print_reverse(std::ostream& out) const{
     out << "\t- experiment:\n\t\tnumber: " << l + 1
         << "\n\t\tinput_data:\n\t\t\t  buffer_size: \"" << series[l]
         << "kb\"\n\t\tresults:\n\t\t duration: \""<< time_reverse[l]
-        << "ns\"" << std::endl;
+        << "mcs\"" << std::endl;
   }
   out << std::endl;
 }
@@ -184,7 +181,7 @@ void Tester::print_random(std::ostream& out) const{
     out << "\t- experiment:\n\t\tnumber: " << l + 1
         << "\n\t\tinput_data:\n\t\t\t  buffer_size: \"" << series[l]
         << "kb\"\n\t\tresults:\n\t\t duration: \""<< time_random[l]
-        << "ns\"" << std::endl;
+        << "mcs\"" << std::endl;
   }
   out << std::endl;
 }
