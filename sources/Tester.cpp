@@ -91,7 +91,7 @@ void Tester::direct() {
           std::chrono::duration_cast<std::chrono::microseconds>(end - start)
               .count();
     }
-    elapsed_seconds=round(static_cast<double>(elapsed_seconds) / iter);
+    elapsed_seconds = round(static_cast<double>(elapsed_seconds) / iter);
     time_direct.push_back(elapsed_seconds);
   }
 }
@@ -115,7 +115,7 @@ void Tester::reverse(){
           std::chrono::duration_cast<std::chrono::microseconds>(end - start)
               .count();
     }
-    elapsed_seconds=round(static_cast<double>(elapsed_seconds) / iter);
+    elapsed_seconds = round(static_cast<double>(elapsed_seconds) / iter);
     time_reverse.push_back(elapsed_seconds);
   }
 }
@@ -148,7 +148,7 @@ void Tester::random(){
           std::chrono::duration_cast<std::chrono::microseconds>(end - start)
               .count();
     }
-    elapsed_seconds=round(static_cast<double>(elapsed_seconds) / iter);
+    elapsed_seconds = round(static_cast<double>(elapsed_seconds) / iter);
     time_random.push_back(round(elapsed_seconds));
   }
 }
