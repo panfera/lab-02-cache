@@ -149,61 +149,61 @@ investigation:
 		input_data:
 			  buffer_size: "32kb"
 		results:
-		 duration: "0mcs"
+		 duration: "1mcs"
 	- experiment:
 		number: 3
 		input_data:
 			  buffer_size: "64kb"
 		results:
-		 duration: "1mcs"
+		 duration: "2mcs"
 	- experiment:
 		number: 4
 		input_data:
 			  buffer_size: "128kb"
 		results:
-		 duration: "3mcs"
+		 duration: "6mcs"
 	- experiment:
 		number: 5
 		input_data:
 			  buffer_size: "256kb"
 		results:
-		 duration: "7mcs"
+		 duration: "13mcs"
 	- experiment:
 		number: 6
 		input_data:
 			  buffer_size: "512kb"
 		results:
-		 duration: "15mcs"
+		 duration: "25mcs"
 	- experiment:
 		number: 7
 		input_data:
 			  buffer_size: "1024kb"
 		results:
-		 duration: "31mcs"
+		 duration: "45mcs"
 	- experiment:
 		number: 8
 		input_data:
 			  buffer_size: "2048kb"
 		results:
-		 duration: "65mcs"
+		 duration: "174mcs"
 	- experiment:
 		number: 9
 		input_data:
 			  buffer_size: "4096kb"
 		results:
-		 duration: "131mcs"
+		 duration: "346mcs"
 	- experiment:
 		number: 10
 		input_data:
 			  buffer_size: "8192kb"
 		results:
-		 duration: "436mcs"
+		 duration: "729mcs"
 	- experiment:
 		number: 11
 		input_data:
 			  buffer_size: "12288kb"
 		results:
-		 duration: "699mcs"
+		 duration: "1247mcs"
 
 investigation:
 	travel_order: "reverse"
@@ -225,55 +225,55 @@ investigation:
 		input_data:
 			  buffer_size: "64kb"
 		results:
-		 duration: "2mcs"
+		 duration: "3mcs"
 	- experiment:
 		number: 4
 		input_data:
 			  buffer_size: "128kb"
 		results:
-		 duration: "5mcs"
+		 duration: "6mcs"
 	- experiment:
 		number: 5
 		input_data:
 			  buffer_size: "256kb"
 		results:
-		 duration: "9mcs"
+		 duration: "12mcs"
 	- experiment:
 		number: 6
 		input_data:
 			  buffer_size: "512kb"
 		results:
-		 duration: "18mcs"
+		 duration: "24mcs"
 	- experiment:
 		number: 7
 		input_data:
 			  buffer_size: "1024kb"
 		results:
-		 duration: "36mcs"
+		 duration: "48mcs"
 	- experiment:
 		number: 8
 		input_data:
 			  buffer_size: "2048kb"
 		results:
-		 duration: "69mcs"
+		 duration: "179mcs"
 	- experiment:
 		number: 9
 		input_data:
 			  buffer_size: "4096kb"
 		results:
-		 duration: "139mcs"
+		 duration: "456mcs"
 	- experiment:
 		number: 10
 		input_data:
 			  buffer_size: "8192kb"
 		results:
-		 duration: "477mcs"
+		 duration: "644mcs"
 	- experiment:
 		number: 11
 		input_data:
 			  buffer_size: "12288kb"
 		results:
-		 duration: "836mcs"
+		 duration: "1018mcs"
 
 investigation:
 	travel_order: "random"
@@ -283,13 +283,13 @@ investigation:
 		input_data:
 			  buffer_size: "16kb"
 		results:
-		 duration: "2mcs"
+		 duration: "3mcs"
 	- experiment:
 		number: 2
 		input_data:
 			  buffer_size: "32kb"
 		results:
-		 duration: "5mcs"
+		 duration: "6mcs"
 	- experiment:
 		number: 3
 		input_data:
@@ -301,49 +301,49 @@ investigation:
 		input_data:
 			  buffer_size: "128kb"
 		results:
-		 duration: "23mcs"
+		 duration: "24mcs"
 	- experiment:
 		number: 5
 		input_data:
 			  buffer_size: "256kb"
 		results:
-		 duration: "49mcs"
+		 duration: "51mcs"
 	- experiment:
 		number: 6
 		input_data:
 			  buffer_size: "512kb"
 		results:
-		 duration: "103mcs"
+		 duration: "104mcs"
 	- experiment:
 		number: 7
 		input_data:
 			  buffer_size: "1024kb"
 		results:
-		 duration: "186mcs"
+		 duration: "198mcs"
 	- experiment:
 		number: 8
 		input_data:
 			  buffer_size: "2048kb"
 		results:
-		 duration: "352mcs"
+		 duration: "361mcs"
 	- experiment:
 		number: 9
 		input_data:
 			  buffer_size: "4096kb"
 		results:
-		 duration: "883mcs"
+		 duration: "1158mcs"
 	- experiment:
 		number: 10
 		input_data:
 			  buffer_size: "8192kb"
 		results:
-		 duration: "3939mcs"
+		 duration: "3952mcs"
 	- experiment:
 		number: 11
 		input_data:
 			  buffer_size: "12288kb"
 		results:
-		 duration: "8923mcs"                                              |  ...
+		 duration: "8497mcs"
 ```
 
 ⚠️ В отчет также необходимо добавить общий график с результатами всех исследований. ⚠️
