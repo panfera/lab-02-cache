@@ -184,7 +184,7 @@ investigation:
         input_data:
               buffer_size: "2048kb"
         results:
-         duration: "76mcs"
+         duration: "103mcs"
     - experiment:
         number: 9
         input_data:
@@ -345,5 +345,5 @@ investigation:
          duration: "8804mcs"
 
 ```
-
+![Cache](./images/graph.jpg)
 

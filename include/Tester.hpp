@@ -41,7 +41,7 @@ class Tester {
   int size;
   int* testing_buf;
   int L_min, L_max, L1_element;
-  const int iter = 100;
+  const int iter = 1000;
 
   std::vector<double> time_direct;
   std::vector<double> time_reverse;
