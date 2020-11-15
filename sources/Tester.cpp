@@ -42,7 +42,7 @@ void Tester::show_series(std::ostream& out) {
 
 void Tester::create_buffer() {
   std::mt19937 gen; // создаем объект
-  gen.seed(time(0)); // инициализируем его начальным значением
+  gen.seed(time(0)); //инициализируем его начальным значением
 
   buf = new int* [series.size()];
   int* d_buf;
