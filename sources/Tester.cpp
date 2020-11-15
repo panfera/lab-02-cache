@@ -154,7 +154,7 @@ void Tester::random(){
 }
 
 void Tester::print_direct(std::ostream& out) const{
-  out << "investigation:\n    travel_order: \"reverse\"\n    experiments:\n";
+  out << "investigation:\n    travel_order: \"direct\"\n    experiments:\n";
   for (size_t l = 0; l < size_buf.size(); ++l){
     out << "    - experiment:\n        number: " << l + 1
         << "\n        input_data:\n              buffer_size: \"" << series[l]
@@ -176,7 +176,7 @@ void Tester::print_reverse(std::ostream& out) const{
 }
 
 void Tester::print_random(std::ostream& out) const{
-  out << "investigation:\n    travel_order: \"reverse\"\n    experiments:\n";
+  out << "investigation:\n    travel_order: \"random\"\n    experiments:\n";
   for (size_t l = 0; l < size_buf.size(); ++l){
     out << "    - experiment:\n        number: " << l + 1
         << "\n        input_data:\n              buffer_size: \"" << series[l]
