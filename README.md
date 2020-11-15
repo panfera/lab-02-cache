@@ -135,9 +135,10 @@ cache_size['3'] = 8 mb;
 Ниже представлен формат и пример отчета:
 
 ```yaml
-investigation:
+  investigation:
 	travel_order: "direction"
 	experiments:
+<<<<<<< HEAD
 	- experiment:
 		number: 1
 		input_data:
@@ -338,12 +339,219 @@ investigation:
 			  buffer_size: "8192kb"
 		results:
 		 duration: "3952mcs"
-	- experiment:
-		number: 11
+=======
+ 	- experiment:
+ 		number: 1
+ 		input_data:
+ 			  buffer_size: "16kb"
+ 		results:
+ 		 duration: "0mcs"
+ 	- experiment:
+ 		number: 2
+ 		input_data:
+ 			  buffer_size: "32kb"
+ 		results:
+ 		 duration: "1mcs"
+ 	- experiment:
+ 		number: 3
+ 		input_data:
+ 			  buffer_size: "64kb"
+ 		results:
+ 		 duration: "2mcs"
+ 	- experiment:
+ 		number: 4
+ 		input_data:
+ 			  buffer_size: "128kb"
+ 		results:
+ 		 duration: "5mcs"
+ 	- experiment:
+ 		number: 5
+ 		input_data:
+ 			  buffer_size: "256kb"
+ 		results:
+ 		 duration: "11mcs"
+ 	- experiment:
+ 		number: 6
+ 		input_data:
+ 			  buffer_size: "512kb"
+ 		results:
+ 		 duration: "24mcs"
+ 	- experiment:
+ 		number: 7
+ 		input_data:
+ 			  buffer_size: "1024kb"
+ 		results:
+ 		 duration: "50mcs"
+ 	- experiment:
+ 		number: 8
+ 		input_data:
+ 			  buffer_size: "2048kb"
+ 		results:
+ 		 duration: "104mcs"
+ 	- experiment:
+ 		number: 9
+ 		input_data:
+ 			  buffer_size: "4096kb"
+ 		results:
+ 		 duration: "205mcs"
+ 	- experiment:
+ 		number: 10
+ 		input_data:
+ 			  buffer_size: "8192kb"
+ 		results:
+ 		 duration: "414mcs"
+ 	- experiment:
+ 		number: 11
+ 		input_data:
+ 			  buffer_size: "12288kb"
+ 		results:
+ 		 duration: "612mcs"
+ 
+  investigation:
+ 	travel_order: "reverse"
+ 	experiments:
+ 	- experiment:
+ 		number: 1
+ 		input_data:
+ 			  buffer_size: "16kb"
+ 		results:
+ 		 duration: "0mcs"
+ 	- experiment:
+ 		number: 2
+ 		input_data:
+ 			  buffer_size: "32kb"
+ 		results:
+ 		 duration: "1mcs"
+ 	- experiment:
+ 		number: 3
+ 		input_data:
+ 			  buffer_size: "64kb"
+ 		results:
+ 		 duration: "3mcs"
+ 	- experiment:
+ 		number: 4
+ 		input_data:
+ 			  buffer_size: "128kb"
+ 		results:
+ 		 duration: "6mcs"
+ 	- experiment:
+ 		number: 5
+ 		input_data:
+ 			  buffer_size: "256kb"
+ 		results:
+ 		 duration: "12mcs"
+ 	- experiment:
+		number: 6
+ 		input_data:
+ 			  buffer_size: "512kb"
+ 		results:
+ 		 duration: "26mcs"
+ 	- experiment:
+ 		number: 7
+ 		input_data:
+ 			  buffer_size: "1024kb"
+ 		results:
+ 		 duration: "53mcs"
+ 	- experiment:
+ 		number: 8
+ 		input_data:
+ 			  buffer_size: "2048kb"
+ 		results:
+ 		 duration: "106mcs"
+ 	- experiment:
+ 		number: 9
+ 		input_data:
+ 			  buffer_size: "4096kb"
+ 		results:
+ 		 duration: "227mcs"
+ 	- experiment:
+ 		number: 10
+ 		input_data:
+ 			  buffer_size: "8192kb"
+ 		results:
+ 		 duration: "477mcs"
+ 	- experiment:
+ 		number: 11
+ 		input_data:
+ 			  buffer_size: "12288kb"
+ 		results:
+ 		 duration: "721mcs"
+ 
+  investigation:
+ 	travel_order: "random"
+ 	experiments:
+ 	- experiment:
+ 		number: 1
+ 		input_data:
+ 			  buffer_size: "16kb"
+ 		results:
+ 		 duration: "2mcs"
+ 	- experiment:
+ 		number: 2
+ 		input_data:
+			  buffer_size: "32kb"
+ 		results:
+ 		 duration: "4mcs"
+ 	- experiment:
+ 		number: 3
+ 		input_data:
+ 			  buffer_size: "64kb"
+ 		results:
+ 		 duration: "10mcs"
+ 	- experiment:
+ 		number: 4
 		input_data:
+ 			  buffer_size: "128kb"
+ 		results:
+ 		 duration: "20mcs"
+ 	- experiment:
+ 		number: 5
+ 		input_data:
+ 			  buffer_size: "256kb"
+ 		results:
+ 		 duration: "42mcs"
+ 	- experiment:
+ 		number: 6
+ 		input_data:
+ 			  buffer_size: "512kb"
+ 		results:
+ 		 duration: "89mcs"
+	- experiment:
+ 		number: 7
+ 		input_data:
+ 			  buffer_size: "1024kb"
+ 		results:
+ 		 duration: "201mcs"
+ 	- experiment:
+ 		number: 8
+ 		input_data:
+ 			  buffer_size: "2048kb"
+ 		results:
+ 		 duration: "498mcs"
+ 	- experiment:
+ 		number: 9
+		input_data:
+			  buffer_size: "4096kb"
+		results:
+		 duration: "1099mcs"
+>>>>>>> bbb501f2ee0d46438950498d24064d0f6a20bf0f
+	- experiment:
+ 		number: 10
+ 		input_data:
+ 			  buffer_size: "8192kb"
+ 		results:
+ 		 duration: "2422mcs"
+ 	- experiment:
+ 		number: 11
+ 		input_data:
 			  buffer_size: "12288kb"
+<<<<<<< HEAD
 		results:
 		 duration: "8497mcs"
+=======
+ 		results:
+		 duration: "3850mcs"                                           
+>>>>>>> bbb501f2ee0d46438950498d24064d0f6a20bf0f
 ```
 
 ⚠️ В отчет также необходимо добавить общий график с результатами всех исследований. ⚠️
