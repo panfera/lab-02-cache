@@ -42,6 +42,8 @@ class Tester {
   int* testing_buf;
   int L_min, L_max, L1_element;
   const int iter = 1000;
+  const int step = 16;
+  const int count_elements = 1024/sizeof(int);
 
   std::vector<double> time_direct;
   std::vector<double> time_reverse;

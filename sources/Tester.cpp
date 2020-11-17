@@ -6,8 +6,8 @@
 
 Tester::Tester(int Lmin, int Lmax):
     series(0), buf(NULL), size_buf(0), m(0), size(0), testing_buf(0),
-    L_min(Lmin), L_max(Lmax), L1_element(L_min*1024/sizeof(int)),
-    time_direct(0), time_reverse(0), time_random(0){
+    L_min(Lmin), L_max(Lmax), time_direct(0), time_reverse(0), time_random(0){
+  L1_element = L_min*count_elements;
 }
 Tester::~Tester() {
   for (size_t i = 0; i < size_buf.size(); ++i)
@@ -47,7 +47,7 @@ void Tester::create_buffer() {
   buf = new int* [series.size()];
   int* d_buf;
   for (size_t i = 0; i < series.size(); ++i) {
-    size_buf.push_back(series[i] * 1024 / sizeof(int));
+    size_buf.push_back(series[i] * count_elements);
     d_buf = new int [size_buf[i]];
 
     for (int k = 0; k < size_buf[i]; ++k) {
@@ -64,10 +64,10 @@ void Tester::warming_up(int l){
   if (size < L1_element){
     count = L1_element/size;
     for (int k = 0; k < count; ++k)
-      for (int i = 0; i < size; i += 16)
+      for (int i = 0; i < size; i += step)
         m = testing_buf[i];
   } else{
-    for (int i = 0; i < L1_element; i += 16)
+    for (int i = 0; i < L1_element; i += step)
       m = testing_buf[i];
   }
 }
@@ -85,7 +85,7 @@ void Tester::direct() {
 
     for (int k = 0; k < iter; ++k) {
       auto start = std::chrono::high_resolution_clock::now();
-      for (int i = 0; i < size; i += 16) m = testing_buf[i];
+      for (int i = 0; i < size; i += step) m = testing_buf[i];
       auto end = std::chrono::high_resolution_clock::now();
       elapsed_seconds +=
           std::chrono::duration_cast<std::chrono::microseconds>(end - start)
@@ -109,7 +109,7 @@ void Tester::reverse(){
 
     for (int k = 0; k < iter; ++k) {
       auto start = std::chrono::high_resolution_clock::now();
-      for (int i = size - size % 16 - 1; i >= 0; i -= 16) m = testing_buf[i];
+      for (int i = size - size % step - 1; i >= 0; i -= step) m = testing_buf[i];
       auto end = std::chrono::high_resolution_clock::now();
       elapsed_seconds +=
           std::chrono::duration_cast<std::chrono::microseconds>(end - start)
@@ -126,7 +126,7 @@ void Tester::random(){
 
   for (size_t l = 0; l < size_buf.size(); ++l){
     std::vector<int> index;
-    int count = (size_buf[l] == 0) ? 0 : (1 + (size_buf[l] - 1) / 16);
+    int count = (size_buf[l] == 0) ? 0 : (1 + (size_buf[l] - 1) / step);
     for (int i = 0; i < count; ++i) {
       m = gen2() % size_buf[l];
       index.push_back(m);
