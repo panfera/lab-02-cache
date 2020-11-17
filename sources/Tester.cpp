@@ -109,7 +109,8 @@ void Tester::reverse(){
 
     for (int k = 0; k < iter; ++k) {
       auto start = std::chrono::high_resolution_clock::now();
-      for (int i = size - size % step - 1; i >= 0; i -= step) m = testing_buf[i];
+      for (int i = size - size % step - 1; i >= 0; i -= step)
+        m = testing_buf[i];
       auto end = std::chrono::high_resolution_clock::now();
       elapsed_seconds +=
           std::chrono::duration_cast<std::chrono::microseconds>(end - start)
