@@ -20,7 +20,7 @@ TEST(PROGRAMM, WORK){
 
 TEST(PROGRAMM, DEFINE_SERIES){
   int L1 = 32;
-  int L3 = 8192;//8193K = 8M
+  int L3 = 8*1024;//8192K = 8M
   Tester exp(L1, L3);
   exp.define_series();
   std::stringstream str;
